@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
+require 'minitest/pride'
 require_relative '../lib/restricted_array'
 require_relative '../lib/using_restricted_array'
 
@@ -85,7 +86,7 @@ describe "restricted array" do
 
     smallest.must_equal my_integer_array[0]
   end
-
+  #
   it "reverse array - odd count" do
     size = 9
     my_integer_array = RestrictedArray.new(size)
@@ -175,7 +176,7 @@ describe "restricted array" do
 
     binary_search(my_integer_array, size, value_to_find).must_equal true
   end
-
+  
   it "binary search method - value does not exist in the array" do
     size = 15
     my_integer_array = RestrictedArray.new(size)
